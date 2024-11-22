@@ -1,0 +1,9 @@
+.banner-new-list {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), asset-url("new_list.jpg");
+}
+.form-new-list {
+  & input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

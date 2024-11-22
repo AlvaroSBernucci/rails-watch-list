@@ -1,0 +1,17 @@
+.show-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+.card-img {
+  & img {
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+  }
+}
+.card-text {
+  font-size: $font-size-card;
+}

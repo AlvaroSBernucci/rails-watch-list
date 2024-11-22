@@ -1,0 +1,25 @@
+<nav class="navbar bg-primary navbar-expand-lg p-2">
+  <div class="container-fluid">
+    <%= link_to "Movies Lists", lists_path, class: "navbar-brand text-light fw-semibold" %>
+    <%= link_to "New List", new_list_path, class: "btn btn-info rounded-3 fw-semibold" %>
+  </div>
+</nav>
+<div class="banner banner-home mb-5">
+  <div class="container">
+    <h1 class="fs-1">Save any kind of movies</h1>
+  </div>
+</div>
+<div class="container">
+  <div class="row g-3">
+    <% @lists.each do |list| %>
+      <div class="col-6">
+        <div class="card card-home rounded-4">
+          <div class="card-body text-center">
+            <h5 class="card-title mb-3 mt-3 text-light fs-2"><%= list.name %></h5>
+            <%= link_to "View List", list_path(list), class: "card-link btn btn-info rounded-3 fw-semibold mt-5" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

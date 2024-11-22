@@ -1,0 +1,20 @@
+<nav class="navbar bg-primary navbar-expand-lg p-2">
+  <div class="container-fluid">
+    <%= link_to "Movies Lists", lists_path, class: "navbar-brand text-light fw-semibold" %>
+    <%= link_to "New List", new_list_path, class: "btn btn-info rounded-3 fw-semibold" %>
+  </div>
+</nav>
+<div class="banner">
+  <div class="container">
+    <h1 class="fs-1"><%= @list.name %></h1>
+  </div>
+</div>
+<div class="container bookmark-form border border-light rounded-4 p-3 mt-4">
+  <h1 class="mb-5 text-center text-primary fw-bold">Add Movie</h1>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie %>
+    <%= f.input :comment %>
+    <%= f.submit class:"btn btn-info rounded-3 fw-semibold" %>
+    <%= link_to "Back to list", list_path(@list), class: "btn btn-info rounded-3 mt-5 mb-5 fw-semibold" %>
+  <% end %>
+</div>

@@ -1,0 +1,17 @@
+<nav class="navbar bg-primary navbar-expand-lg p-2">
+  <div class="container-fluid">
+    <%= link_to "Movies Lists", lists_path, class: "navbar-brand text-light fw-semibold" %>
+    <%= link_to "New List", new_list_path, class: "btn btn-info rounded-3 fw-semibold" %>
+  </div>
+</nav>
+<div class="banner banner-new-list mb-5">
+  <div class="container">
+    <h1 class="fs-1">Build Your Film Collection</h1>
+  </div>
+</div>
+<div class="container form-new-list border border-light rounded-4 p-3">
+  <%= simple_form_for(@list) do |f| %>
+    <%= f.input :name, label: "Name of the new list: " %>
+    <%= f.submit class:"btn btn-info rounded-3 fw-semibold" %>
+  <% end %>
+</div>
